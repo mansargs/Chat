@@ -4,7 +4,8 @@ CREATE TABLE conversation_members (
     user_id UUID NOT NULL,
     role TEXT NOT NULL DEFAULT 'member'
         CHECK(role IN ('admin', 'member')),
-    joined_at TIMESTAMPZ NOT NULL DEFAULT now(),
+    joined_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    hidden_at TIMESTAMPTZ,
 
     PRIMARY KEY (conversation_id, user_id),
 

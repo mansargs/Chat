@@ -1,6 +1,6 @@
 -- Add migration script here
 CREATE TABLE conversations (
-    conversation_id UUID PRIMARY KEY DEFAULT get_random_uuid(),
+    conversation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     type TEXT NOT NULL CHECK(type IN ('direct', 'group')),
     name TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()

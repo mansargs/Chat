@@ -5,5 +5,3 @@ members = [
     "frontend",
 ]
 
-[workspace.dependencies]
-
